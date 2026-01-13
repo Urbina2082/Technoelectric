@@ -1,157 +1,122 @@
 <div class="services">
- <span>CLIENTES REFERENTES</span>
- <h3 data-aos="fade-up">Innovación con bases firmes</h3>
+  <span>CLIENTES REFERENTES</span>
+  <h3 data-aos="fade-up">Innovación con bases firmes</h3>
 
- <div class="carrusel-img">
-    
-    <div class="img-box">
-      <img src="/gal2.avif" alt="Cliente 2" />
-    </div>
-    <div class="img-box">
-      <img src="/gal3.avif" alt="Cliente 3" />
-    </div>
-   
-    <div class="img-box">
-      <img src="/gal6.avif" alt="Cliente 6" />
-    </div>
+  <div class="carrusel-wrapper">
+    <button class="btn-carrusel btn-prev" id="btnPrev">
+      <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+    </button>
 
-    <div class="img-box">
-      <img src="/gal26.avif" alt="Cliente 5" />
-    </div>
-   
-
-      <div class="img-box">
-      <img src="/gal7.avif" alt="Cliente 1" />
-    </div>
-    <div class="img-box">
-      <img src="/gal8.avif" alt="Cliente 2" />
-    </div>
-    <div class="img-box">
-      <img src="/gal9.avif" alt="Cliente 3" />
-    </div>
-    <div class="img-box">
-      <img src="/agl10.avif" alt="Cliente 4" />
-    </div>
-    <div class="img-box">
-      <img src="/gal11.avif" alt="Cliente 5" />
-    </div>
-    <div class="img-box">
-      <img src="/gal12.avif" alt="Cliente 6" />
-    </div>
-      <div class="img-box">
-      <img src="/gal13.avif" alt="Cliente 1" />
-    </div>
-    <div class="img-box">
-      <img src="/gal14.avif" alt="Cliente 2" />
-    </div>
-    <div class="img-box">
-      <img src="/gal15.avif" alt="Cliente 3" />
-    </div>
-    <div class="img-box">
-      <img src="/gal16.avif" alt="Cliente 4" />
-    </div>
-    <div class="img-box">
-      <img src="/gal17.avif" alt="Cliente 5" />
-    </div>
-    <div class="img-box">
-      <img src="/gal18.avif" alt="Cliente 6" />
-    </div>
-   
-  <div class="img-box">
-      <img src="/gal19.avif" alt="Cliente 1" />
-    </div>
-    <div class="img-box">
-      <img src="/gal20.avif" alt="Cliente 2" />
+    <div class="carrusel-img" id="miCarrusel">
+      <div class="img-box"><img src="/gal2.avif" alt="Cliente 2" /></div>
+      <div class="img-box"><img src="/gal3.avif" alt="Cliente 3" /></div>
+      <div class="img-box"><img src="/gal6.avif" alt="Cliente 6" /></div>
+      <div class="img-box"><img src="/gal26.avif" alt="Cliente 5" /></div>
+      <div class="img-box"><img src="/gal7.avif" alt="Cliente 1" /></div>
+      <div class="img-box"><img src="/gal8.avif" alt="Cliente 2" /></div>
+      <div class="img-box"><img src="/gal9.avif" alt="Cliente 3" /></div>
+      <div class="img-box"><img src="/agl10.avif" alt="Cliente 4" /></div>
+      <div class="img-box"><img src="/gal11.avif" alt="Cliente 5" /></div>
+      <div class="img-box"><img src="/gal12.avif" alt="Cliente 6" /></div>
+      <div class="img-box"><img src="/gal13.avif" alt="Cliente 1" /></div>
+      <div class="img-box"><img src="/gal14.avif" alt="Cliente 2" /></div>
+      <div class="img-box"><img src="/gal15.avif" alt="Cliente 3" /></div>
+      <div class="img-box"><img src="/gal16.avif" alt="Cliente 4" /></div>
+      <div class="img-box"><img src="/gal17.avif" alt="Cliente 5" /></div>
+      <div class="img-box"><img src="/gal18.avif" alt="Cliente 6" /></div>
+      <div class="img-box"><img src="/gal19.avif" alt="Cliente 1" /></div>
+      <div class="img-box"><img src="/gal20.avif" alt="Cliente 2" /></div>
+      <div class="img-box"><img src="/gal22.avif" alt="Cliente 4" /></div>
+      <div class="img-box"><img src="/gal23.avif" alt="Cliente 5" /></div>
     </div>
 
-    <div class="img-box">
-      <img src="/gal22.avif" alt="Cliente 4" />
-    </div>
-    <div class="img-box">
-      <img src="/gal23.avif" alt="Cliente 5" />
-    </div>
-     
-    
-
- </div>
-
+    <button class="btn-carrusel btn-next" id="btnNext">
+      <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+    </button>
+  </div>
 </div>
+
 <style>
+  .services { padding: 50px 50px; background-color: #ffffff; }
+  span { font-size: 0.8rem; color: rgba(146, 137, 39, 0.939); font-weight: 500; }
+  h3 { font-size: clamp(2rem, 4vw, 2.5rem); color: #000000ba; margin: 10px 0 30px 0; font-weight: 700; }
 
-  .services {
-   
-    padding: 50px 50px;
-    background-color: #ffffff;  
-  } 
- 
-span { 
-    font-size: 0.8rem;
-    color:  rgba(146, 137, 39, 0.939);
-    font-weight: 500;
+  .carrusel-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
- 
-h3 {
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    color: #000000ba;
-    margin: 10px 0 30px 0;
-    font-weight: 700;
+
+  .carrusel-img {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
-.carrusel-img {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  overflow-x: auto; /* Cambiado a auto para mejor comportamiento */
-  width: 100%;
-  scroll-snap-type: x mandatory; /* Ajustado para scroll horizontal */
-  padding: 20px 0; /* Espacio extra para que no se corte la sombra si añades una */
 
-    /* 1. Para Firefox */
-  scrollbar-width: none;
+  .carrusel-img::-webkit-scrollbar { display: none; }
 
-  /* 2. Para Internet Explorer y Edge antiguo */
-  -ms-overflow-style: none;
-}
+  .img-box {
+    scroll-snap-align: center;
+    flex: 0 0 400px;
+    height: 450px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
 
-/* 3. Para Chrome, Safari y el nuevo Edge (motores WebKit) */
-.carrusel-img::-webkit-scrollbar {
-  display: none;
-}
+  .img-box:hover { transform: scale(1.02); cursor: grab; }
+  .img-box img { width: 100%; height: 100%; object-fit: cover; }
 
-.img-box {
-  scroll-snap-align: center;
-  flex: 0 0 400px; /* Asegura que el ancho sea constante y no se encoja */
-  height: 450px;   /* Define una altura fija para que se vea "grande" */
-  
-  border: 1px solid #ddd;
-  border-radius: 1px;
-  background-color: #f9f9f9; 
-  overflow: hidden; /* Importante: recorta lo que sobre de la imagen */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .btn-carrusel {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
 
-.img-box img {
-  width: 100%;
-  height: 100%;     /* Obliga a la imagen a llenar el alto del div */
-  object-fit: cover; /* MAGIA: Llena el div sin deformarse, recortando los bordes */
-  object-position: center; /* Asegura que el centro de la foto sea lo visible */
-}
-
-  
+  .btn-prev { left: 10px; }
+  .btn-next { right: 10px; }
+  .btn-carrusel:hover { background-color: #f0f0f0; transform: scale(1.1); }
+  .btn-carrusel svg { width: 35px; height: 35px; fill: #333; }
 
   @media (max-width: 785px) {
-   .services {
-      padding: 55px 20px;
-    }
-    h3 {
-    
-    margin: 10px 0 30px 0;
-   
-  }
-.img-box {
-
-
+    .services { padding: 55px 20px; }
+    .img-box { flex: 0 0 300px; height: 350px; }
+    .btn-carrusel { width: 45px; height: 45px; }
   }
 </style>
+
+<script>
+  // Esta es la forma correcta en Astro/TypeScript
+  const carrusel = document.getElementById('miCarrusel') as HTMLElement;
+  const btnPrev = document.getElementById('btnPrev');
+  const btnNext = document.getElementById('btnNext');
+
+  // Definimos cuánto se mueve (ancho de la caja + gap)
+  const desplazamiento = 420;
+
+  btnPrev?.addEventListener('click', () => {
+    carrusel.scrollLeft -= desplazamiento;
+  });
+
+  btnNext?.addEventListener('click', () => {
+    carrusel.scrollLeft += desplazamiento;
+  });
+</script>
