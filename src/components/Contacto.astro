@@ -34,16 +34,19 @@
     </div>
   </div>
 
-  <div class="conjunt">
-    <div class="email">
+   <div class="conjunt">
+    <form class="email" action="https://formspree.io/f/administracion@technoelectric.mx" method="POST">
       <p>Nombre:</p>
-      <input type="text" placeholder="Nombre Completo" />
+      <input type="text" name="nombre" placeholder="Nombre Completo" required />
+
       <p>Correo Electronico:</p>
-      <input type="email" placeholder="Correo Electronico" />
+      <input type="email" name="email" placeholder="Correo Electronico" required />
+
       <p>Mensaje:</p>
-      <textarea rows="4" placeholder="Escribe tu mensaje aqui..."></textarea>
-      <button>ENVIAR MENSAJE</button>
-    </div>
+      <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje aqui..." required></textarea>
+
+      <button type="submit">ENVIAR MENSAJE</button>
+    </form>
   </div>
 </div>
 <style>
