@@ -34,89 +34,70 @@
       <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
     </button>
   </div>
+
+  <div id="imageModal" class="modal">
+    <span class="close-modal" id="closeModal">&times;</span>
+    <img class="modal-content" id="imgFull" alt="Vista ampliada" />
+  </div>
 </div>
 
 <style>
-  .services { padding: 50px 50px; background-color: #ffffff; }
+  /* Mantenemos tus estilos anteriores */
+  .services { padding: 50px 50px; background-color: #ffffff; position: relative; }
   span { font-size: 0.8rem; color: rgba(146, 137, 39, 0.939); font-weight: 500; }
   h3 { font-size: clamp(2rem, 4vw, 2.5rem); color: #000000ba; margin: 10px 0 30px 0; font-weight: 700; }
-
-  .carrusel-wrapper {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-  .carrusel-img {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    width: 100%;
-    scroll-snap-type: x mandatory;
-    padding: 20px 0;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
+  .carrusel-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
+  .carrusel-img { display: flex; gap: 20px; overflow-x: auto; width: 100%; scroll-snap-type: x mandatory; padding: 20px 0; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; }
   .carrusel-img::-webkit-scrollbar { display: none; }
-
-  .img-box {
-    scroll-snap-align: center;
-    flex: 0 0 400px;
-    height: 450px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-
-  .img-box:hover { transform: scale(1.02); cursor: grab; }
+  .img-box { scroll-snap-align: center; flex: 0 0 400px; height: 450px; border: 1px solid #ddd; overflow: hidden; transition: transform 0.3s ease; cursor: pointer; }
   .img-box img { width: 100%; height: 100%; object-fit: cover; }
-
-  .btn-carrusel {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: white;
-    border-radius: 50%;
-    border: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    transition: all 0.3s ease;
-  }
-
-  .btn-prev { left: 10px; }
-  .btn-next { right: 10px; }
-  .btn-carrusel:hover { background-color: #f0f0f0; transform: scale(1.1); }
+  .btn-carrusel { position: absolute; width: 60px; height: 60px; background-color: white; border-radius: 50%; border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; }
+  .btn-prev { left: 10px; } .btn-next { right: 10px; }
   .btn-carrusel svg { width: 35px; height: 35px; fill: #333; }
 
-  @media (max-width: 785px) {
-    .services { padding: 55px 20px; }
-    .img-box { flex: 0 0 300px; height: 350px; }
-    .btn-carrusel { width: 45px; height: 45px; }
-  }
+  /* Estilos Modal */
+  .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); align-items: center; justify-content: center; }
+  .modal-content { max-width: 90%; max-height: 80vh; object-fit: contain; }
+  .close-modal { position: absolute; top: 20px; right: 40px; color: white; font-size: 60px; cursor: pointer; }
 </style>
 
-<script>
-  // Esta es la forma correcta en Astro/TypeScript
-  const carrusel = document.getElementById('miCarrusel') as HTMLElement;
-  const btnPrev = document.getElementById('btnPrev');
-  const btnNext = document.getElementById('btnNext');
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carrusel = document.getElementById('miCarrusel');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('imgFull');
+    const closeBtn = document.getElementById('closeModal');
+    const imagenes = document.querySelectorAll('.img-box img');
 
-  // Definimos cuánto se mueve (ancho de la caja + gap)
-  const desplazamiento = 420;
+    // Mover carrusel
+    btnPrev?.addEventListener('click', () => {
+      carrusel.scrollLeft -= 420;
+    });
 
-  btnPrev?.addEventListener('click', () => {
-    carrusel.scrollLeft -= desplazamiento;
-  });
+    btnNext?.addEventListener('click', () => {
+      carrusel.scrollLeft += 420;
+    });
 
-  btnNext?.addEventListener('click', () => {
-    carrusel.scrollLeft += desplazamiento;
+    // Abrir Modal
+    imagenes.forEach((img) => {
+      img.addEventListener('click', (e) => {
+        modal.style.display = 'flex';
+        modalImg.src = e.target.src;
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Cerrar Modal
+    const cerrarModal = () => {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    };
+
+    closeBtn?.addEventListener('click', cerrarModal);
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) cerrarModal();
+    });
   });
 </script>
