@@ -1,231 +1,148 @@
 <div class="Contact">
-  <div class="barra" data-aos="fade-down">
-   Válvulas <span>+</span> Ingeniería <span>+</span> Actuadores <span>+</span> Instrumentación
-    <span>+</span> Iluminación <span>+</span> Soluciones
-  </div>
-
   <div class="InfoContact" id="contacto">
-    <p data-aos="fade-right">-- CONTÁCTANOS</p>
-    <h5 data-aos="fade-right">
-      Obtenga su <span>Cotización Gratuita</span> hoy
-    </h5>
-  </div>
-  <div class="sec" data-aos="fade-right">
-    <div class="sec_1">
-      <div class="container">
-        <form
-          target="_blank"
-          action="https://formsubmit.co/ventas@technoelectric.mx"
-          method="POST"
-        >
-          <input type="hidden" name="_captcha" value="false" />
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col">
-                <input
-                  type="text"
-                  name="name"
-                  class="form-control"
-                  placeholder="Nombre"
-                  required
-                />
-              </div>
-              <div class="col">
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control"
-                  placeholder="Correo Electronico"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <textarea
-              placeholder="Mensaje"
-              class="form-control"
-              name="message"
-              rows="10"
-              required></textarea>
-          </div>
-          <button type="submit" class="btn btn-lg btn-dark btn-block"
-            >Enviar</button
-          >
-        </form>
+    <h5 data-aos="fade-up">INICIEMOS TU PROXIMO PROYECTO</h5>
+    <p>
+      Estamos listos oara transformar tus nesesidades industrialles en
+      soluciones reales y eficientes. Contactenos hy mismo para una consultoria
+      Tecnica.
+    </p>
+
+    <div class="adress">
+      <div class="item-adress">
+        <img src="../Icons/map-solid-24.png" alt="ubicacion" />
+        <div class="cons">
+          <h6>DIRECCION</h6>
+          <p>​Calle Zaragoza #1850 PTE
+Colonia Del Valle, C.P. 26788 <br>
+Sabinas, Coahuila de Zaragoza</p>
+        </div>
+      </div>
+      <div class="item-adress">
+        <img src="../Icons/phone-solid-24.png" alt="telefono" />
+        <div class="cons">
+        <h6>LLAMANOS</h6>
+        <p>+52 861 612 9309</p></div>
+      </div>
+      <div class="item-adress">
+        <img src="../Icons/envelope-solid-24.png" alt="email" />
+        <div class="cons">
+        <h6>CORREO ELECTRONICO</h6>
+        <p>administracion@technoelectric.mx</p>
+      </div>
       </div>
     </div>
-    <div class="sec_2">
-      <h4 data-aos="fade-right">Direccion</h4>
-      <p data-aos="fade-right">
-       Epifanio Ramos 1186, Col. Ismael Rodríguez, Sabinas, Coahuila, C.P. 26720
-      </p>
-      <h4 data-aos="fade-right">Contacto</h4>
-      <p data-aos="fade-right">ventas@technoelectric.mx Tel: 861 612 8990</p>
-      <h4 data-aos="fade-right">Horario</h4>
-      <p data-aos="fade-right">
-        Lunes - Viernes : 7:00 - 7:00 <br /> Sábado - Domingo : 7:00 - 7:00
-      </p>
-      <h4 data-aos="fade-right">Redes Sociales</h4>
-      <div class="redes" data-aos="fade-right">
-        <a
-          href="https://www.facebook.com/ComercializadoraTechnoelectric?locale=es_LA"
-          ><img src="/Icons/facebook-logo-36.png" alt="" /></a
-        >
-        <a href="tel:861 612 8990"
-          ><img src="/Icons/phone-regular-36.png" alt="" /></a
-        >
-        <a href="https://maps.app.goo.gl/xHkD2G49mZLwGXB88"
-          ><img src="/Icons/map-regular-36.png" alt="" /></a
-        >
-        <a href="mailto:ventas@technoelectric.mx"
-          ><img src="/Icons/envelope-regular-36.png" alt="" /></a
-        >
-      </div>
+  </div>
+
+  <div class="conjunt">
+    <div class="email" >
+      <p>Nombre:</p>
+      <input type="text" placeholder="Nombre Completo" />
+      <p>Correo Electronico:</p>
+      <input type="email" placeholder="Correo Electronico" />
+      <p>Mensaje:</p>
+      <textarea rows="4" placeholder="Escribe tu mensaje aqui..."></textarea>
+      <button>ENVIAR MENSAJE</button>
     </div>
   </div>
 </div>
 <style>
-  .barra span {
-    color: #cfc332;
-  }
-  .barra {
-    margin-bottom: 4rem;
-    background: #329430;
-    text-align: center;
-    font-size: clamp(1rem, 2vw, 2rem);
-
-    font-weight: 700;
-    padding: 1rem;
-    color: #fff;
-  }
-  .redes {
-    padding: 1rem 0rem 0rem 0rem;
-    display: inline-flex;
-    gap: 2rem;
+  .Contact {
+    display: flex;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px 20px;
+    margin-top:6rem;
   }
 
-  .redes a {
-    display: inline-flex;
-    border: 0.2rem #cfc332 solid;
-    border-radius: 100%;
-    padding: 0.2rem;
-  }
   .InfoContact {
-    padding: 4rem 8rem;
-  }
-  .sec {
-    display: inline-flex;
-    gap: 10rem;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    max-width: 670px;
   }
 
   .InfoContact h5 {
-    font-size: clamp(1.7rem, 8vw, 2.9rem);
-    margin: 2rem 0rem 2rem 0rem;
-  }
-  h5 span {
-    color: #329430;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 20px;
+    margin: 0;
   }
 
-  .sec_2 {
-    max-width: 27rem;
-    min-width: 16rem;
-  
-    background: #329430;
-    padding: 1rem;
-    color: #fff;
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    border-radius: 1rem;
+  .InfoContact p {
+    font-size: clamp(.9rem, 4vw, 1.1rem);
+    margin-bottom: 30px;
+    color: #333333e1;
   }
 
-  .sec_2 h4 {
-    font-size: 1.6rem;
-    margin: 2rem 0rem 0rem;
+  .cons h6 {
+    margin: 0px;
+    font-size: 1.1rem;
+    margin-bottom: 0px;
   }
 
-  form {
-    max-width: 600px;
-    margin: auto;
-  }
-
-  .form-row {
+  .item-adress {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
+ 
+
+    margin-bottom: 10px;
   }
 
-  .form-group {
-    flex: 1;
-    min-width: 250px;
-    display: flex;
-    flex-direction: column;
+  .item-adress img {
+    margin-right: 10px;
+    width: 36px;
+    height: 36px;
   }
 
-  label {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  input,
-  textarea {
-    border: none;
-    border-bottom: 1px solid #ccc;
-    padding: 8px;
-    font-size: 14px;
-    outline: none;
-    width: 100%;
-    background-color: transparent;
-  }
-
-  input:focus,
-  textarea:focus {
-    border-color: #c7a600;
-  }
-
-  textarea {
-    resize: none;
-  }
-
-  button {
-    background-color: #d4c244;
-    margin-top: 3rem;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-
-  button:hover {
-    background-color: #c7b836;
-  }
-
-  @media (max-width: 1064px) {
-    .InfoContact {
-      padding: 4rem 2rem;
-    }
-    .sec {
-      flex-wrap: wrap;
-      gap: 4rem;
-    }
-  }
-  form {
-    text-align: center;
+  .email {
     display: inline-flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 15px;
+    max-width: 400px;
+    width: 370px;
+    border: rgba(0, 0, 0, 0.419) 2px solid;
+    padding: 20px;
+    border-radius: 20px;
   }
-  .form-row {
-    display: block;
+
+  .email input,
+  .email textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .email button {
+    padding: 10px;
+    background-color: #329430;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .email button:hover {
+    background-color: #287a27;
+  }
+
+  .email p {
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .Contact {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    
+    .email {
+      padding: auto;
+      width: 90%;
+    }
   }
 </style>

@@ -1,176 +1,157 @@
 <div class="services">
-  <h4 data-aos="fade-right" id="Servicios">-- SERVICIOS</h4>
-  <div class="titleServices">
-    <h3 data-aos="fade-right">
-      Explora nuestros sitios <br />
-      <span>en construcción</span>
-    </h3>
+ <span>CLIENTES REFERENTES</span>
+ <h3 data-aos="fade-up">Innovacion con bases firmes</h3>
 
-    <a href="#ServiciosIngeneria"
-      ><button data-aos="fade-right">Ver Servicios e Ingenería</button></a
-    >
-  </div>
-  <div class="cards">
-    <div class="cards1 card_iti" data-aos="fade-down">
-      <div class="one" data-aos="fade-down">
-        <h4>Construccion 1</h4>
-        <p>
-          Dedicados a la industria minera, nos especializamos en la
-          implementación de estructuras modernas, cumpliendo rigurosamente con
-          los estándares globales de calidad y desempeño.
-        </p>
-      </div>
+ <div class="carrusel-img">
+    
+    <div class="img-box">
+      <img src="/gal2.avif" alt="Cliente 2" />
     </div>
-    <div class="cards2 card_iti" data-aos="fade-down">
-      <div class="one" data-aos="fade-down">
-        <h4>Construccion 2</h4>
-        <p>
-          Ofrecemos soluciones integrales para la minería que integran
-          tecnología avanzada, resistencia prolongada y bajo costo de
-          mantenimiento.
-        </p>
-      </div>
+    <div class="img-box">
+      <img src="/gal3.avif" alt="Cliente 3" />
     </div>
-    <div class="cards3 card_iti" data-aos="fade-down">
-      <div class="one" data-aos="fade-down">
-        <h4>Construccion 3</h4>
-        <p>
-          Dedicados a la industria minera, nos especializamos en la
-          implementación de estructuras modernas, cumpliendo rigurosamente.
-        </p>
-      </div>
+   
+    <div class="img-box">
+      <img src="/gal6.avif" alt="Cliente 6" />
     </div>
-  </div>
+
+    <div class="img-box">
+      <img src="/gal26.avif" alt="Cliente 5" />
+    </div>
+   
+
+      <div class="img-box">
+      <img src="/gal7.avif" alt="Cliente 1" />
+    </div>
+    <div class="img-box">
+      <img src="/gal8.avif" alt="Cliente 2" />
+    </div>
+    <div class="img-box">
+      <img src="/gal9.avif" alt="Cliente 3" />
+    </div>
+    <div class="img-box">
+      <img src="/agl10.avif" alt="Cliente 4" />
+    </div>
+    <div class="img-box">
+      <img src="/gal11.avif" alt="Cliente 5" />
+    </div>
+    <div class="img-box">
+      <img src="/gal12.avif" alt="Cliente 6" />
+    </div>
+      <div class="img-box">
+      <img src="/gal13.avif" alt="Cliente 1" />
+    </div>
+    <div class="img-box">
+      <img src="/gal14.avif" alt="Cliente 2" />
+    </div>
+    <div class="img-box">
+      <img src="/gal15.avif" alt="Cliente 3" />
+    </div>
+    <div class="img-box">
+      <img src="/gal16.avif" alt="Cliente 4" />
+    </div>
+    <div class="img-box">
+      <img src="/gal17.avif" alt="Cliente 5" />
+    </div>
+    <div class="img-box">
+      <img src="/gal18.avif" alt="Cliente 6" />
+    </div>
+   
+  <div class="img-box">
+      <img src="/gal19.avif" alt="Cliente 1" />
+    </div>
+    <div class="img-box">
+      <img src="/gal20.avif" alt="Cliente 2" />
+    </div>
+
+    <div class="img-box">
+      <img src="/gal22.avif" alt="Cliente 4" />
+    </div>
+    <div class="img-box">
+      <img src="/gal23.avif" alt="Cliente 5" />
+    </div>
+     
+    
+
+ </div>
+
 </div>
 <style>
+
   .services {
-    background: #329430;
-    padding: 4rem 8rem;
+   
+    padding: 50px 50px;
+    background-color: #ffffff;  
+  } 
+ 
+span { 
+    font-size: 0.8rem;
+    color:  rgba(146, 137, 39, 0.939);
+    font-weight: 500;
   }
-
-  .services h4 {
-    color: #fff;
-    font-weight: 600;
-    margin: 0rem;
+ 
+h3 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #000000ba;
+    margin: 10px 0 30px 0;
+    font-weight: 700;
   }
+.carrusel-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto; /* Cambiado a auto para mejor comportamiento */
+  width: 100%;
+  scroll-snap-type: x mandatory; /* Ajustado para scroll horizontal */
+  padding: 20px 0; /* Espacio extra para que no se corte la sombra si añades una */
 
-  .titleServices {
-    display: flex;
-    justify-content: space-between;
+    /* 1. Para Firefox */
+  scrollbar-width: none;
 
-    align-items: center;
-  }
+  /* 2. Para Internet Explorer y Edge antiguo */
+  -ms-overflow-style: none;
+}
 
-  .titleServices h3 {
-    color: #fff;
-    font-size: clamp(1.8rem, 6vw, 3rem);
-  }
+/* 3. Para Chrome, Safari y el nuevo Edge (motores WebKit) */
+.carrusel-img::-webkit-scrollbar {
+  display: none;
+}
 
-  .titleServices h3 span {
-    color: #cfc332;
-  }
+.img-box {
+  scroll-snap-align: center;
+  flex: 0 0 400px; /* Asegura que el ancho sea constante y no se encoja */
+  height: 450px;   /* Define una altura fija para que se vea "grande" */
+  
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  background-color: #f9f9f9; 
+  overflow: hidden; /* Importante: recorta lo que sobre de la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  button {
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    font-weight: 550;
-    border: 0px #ffffff00 solid;
-    padding: 0.6rem 1rem;
-    border-radius: 12rem;
-    background: #cfc332;
-  }
+.img-box img {
+  width: 100%;
+  height: 100%;     /* Obliga a la imagen a llenar el alto del div */
+  object-fit: cover; /* MAGIA: Llena el div sin deformarse, recortando los bordes */
+  object-position: center; /* Asegura que el centro de la foto sea lo visible */
+}
 
-  /* -------------cards------------- */
-
-  .cards {
-    display: flex;
-    gap: 4rem;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0rem;
-    flex-wrap: wrap;
-  }
-
-  .card_iti {
-    border-radius: 2rem;
-    max-width: 17rem;
-    min-width: 15rem;
-    height: 23rem;
-    border: 12rem;
-    padding: 0.8rem;
-    position: relative;
-    color: #fff;
-  }
-
-  .one {
-    position: absolute;
-    bottom: 1.3rem;
-  }
-  .one h4 {
-    color: #cfc332;
-    font-size: 1.6rem;
-  }
-  .cards1 {
-    background-image: linear-gradient(
-        #c5212100 30%,
-        #00000086 40%,
-        #000000f3 90%
-      ),
-      url(/card_1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .cards2 {
-    background-image: linear-gradient(
-        #c5212100 30%,
-        #00000086 40%,
-        #000000f3 90%
-      ),
-      url(/card_2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .cards3 {
-    background-image: linear-gradient(
-        #c5212100 30%,
-        #00000086 40%,
-        #000000f3 90%
-      ),
-      url(/card_3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  @media (max-width: 1183px) {
-    .cards {
-      gap: 4rem;
-
-      flex-wrap: wrap;
-    }
-    .services {
-      padding: 4rem 2rem;
-    }
-  }
+  
 
   @media (max-width: 785px) {
-    .services {
-      background: #329430;
-      padding: 4rem 2rem;
+   .services {
+      padding: 55px 20px;
     }
-    h4 {
-      text-align: center;
-    }
-    .titleServices {
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: center;
-    }
-    .cards {
-      gap: 2rem;
-    }
+    h3 {
+    
+    margin: 10px 0 30px 0;
+   
+  }
+.img-box {
+
+
   }
 </style>

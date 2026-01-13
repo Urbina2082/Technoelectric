@@ -1,95 +1,134 @@
-<div class="Articles" id="Productos">
-  <b  data-aos="fade-up">-- PRODUCTOS</b>
-  <h4  data-aos="fade-up">PRINCIPALES <span>ARTCÍULOS</span></h4>
-  <div class="princ_articles">
-    <div class="art_1" data-aos="fade-down">
-      <img src="/valvulas.jpg" alt="" />
-      <h5  data-aos="fade-down">Válvulas</h5>
-      <p  data-aos="fade-down">
-        Equipos industriales diseñados para controlar, regular o detener el
-        flujo de líquidos y gases en tuberías. Son esenciales en procesos de
-        gran escala donde la seguridad y eficiencia operativa son prioridad.
-      </p>
-     <a href="https://www.dezurik.com/"><button  data-aos="fade-up">Ver más...</button></a> 
+<div class="Articles"  id="Distribuciones">
+  <h4 data-aos="fade-up">
+    PRINCIPALES MARCAS QUE <br />
+    <span> DISTRIBUIMOS</span>
+  </h4>
+  <p >
+    Distribuidores directos de marcas líderes como Siemens, Schneider y TST en
+    equipo eléctrico y válvulas, además de fabricantes de luminarias LED bajo
+    nuestra marca propia, Technoelectric.
+  </p>
+
+  <div class="marcas">
+    <div class="marcaa" >
+      <img src="/1.avif" alt="1" />
     </div>
-    <div class="art_2" data-aos="fade-down">
-      <img src="/actuadores.jpg" alt="" />
-      <h5  data-aos="fade-down"> Actuadores Electricos</h5>
-      <p  data-aos="fade-down">
-        Dispositivos que automatizan la apertura y cierre de válvulas
-        industriales mediante energía eléctrica. Garantizan precisión,
-        confiabilidad y reducción de intervención manual en plantas y sistemas
-        críticos.
-      </p>
-     <a href="https://www.flowserve.com/Products/Heritage-Brands/Limitorque"> <button  data-aos="fade-up">Ver más...</button></a>
+    <div class="marcaa">
+      <img src="/2.avif" alt="2" />
     </div>
-    <div class="art_3" data-aos="fade-down">
-      <img src="/instrumentacion.jpg" alt="" />
-      <h5  data-aos="fade-down">Instrumentacion</h5>
-      <p  data-aos="fade-down">
-        Conjunto de equipos utilizados para medir, monitorear y controlar
-        variables de procesos industriales como presión, temperatura, caudal y
-        nivel. Aseguran la optimización y seguridad en operaciones de alta
-        exigencia.
-      </p>
-      <button data-aos="fade-up">Ver más...</button>
+    <div class="marcaa">
+      <img src="/3.avif" alt="3" />
+    </div>
+    <div class="marcaa">
+      <img src="/4.avif" alt="4" />
+    </div>
+    <div class="marcaa">
+      <img src="/5.webp" alt="5" />
+    </div>
+    <div class="marcaa">
+      <img src="/6.webp" alt="6" />
+    </div>
+    <div class="marcaa">
+      <img src="/7.avif" alt="7" />
+    </div>
+    <div class="marcaa">
+      <img src="/8.avif" alt="8" />
+    </div>
+    <div class="marcaa">
+      <img src="/9.avif" alt="9" />
+    </div>
+    <div class="marcaa">
+      <img src="/10.avif" alt="10" />
+    </div>
+    <div class="marcaa">
+      <img src="/11.avif" alt="11" />
+    </div>
+    <div class="marcaa">
+      <img src="/12.webp" alt="12" />
+    </div>
+    <div class="marcaa">
+      <img src="/13.webp" alt="13" />
+    </div>
+    <div class="marcaa">
+      <img src="/14.webp" alt="14" />
+    </div>
+    <div class="marcaa">
+      <img src="/15.avif" alt="15" />
+    </div>
+    <div class="marcaa">
+      <img src="/16.webp" alt="16" />
     </div>
   </div>
 </div>
 <style>
   .Articles {
+    background-color: #f5f5f5bb;
+    padding: 50px 0;
     text-align: center;
-    padding: 3rem 0rem 5rem;
   }
 
-  .Articles h4 {
-      font-size: clamp(1.7rem,8vw,2.9rem);
+.Articles p{
+    max-width: 900px;
+    margin: 0 auto 40px;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    color: #333333e1;
+    padding: 0px 20px;
+}
+
+  h4 {
+    padding: 0px 10px;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 20px;
   }
 
-  .Articles h4 span {
+  h4 span {
     color: #329430;
   }
-  .princ_articles {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 4rem;
-    padding: 0rem 5rem;
+.marcas {
+  display: grid;
+  /* Ajustamos el tamaño mínimo para que quepan más logos por fila */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.marcaa {
+  width: 100%;
+  height: 120px; /* Reducimos la altura para que los logos horizontales no se vean perdidos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* Opcional: añade un fondo blanco si los logos son transparentes */
+  background-color: #fff; 
+}
+
+.marcaa img {
+  /* ESTA ES LA PARTE IMPORTANTE */
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantiene la proporción sin estirar */
+  object-position: center; /* Asegura que el logo esté en el puro medio */
+  padding: 5px; /* Evita que el logo toque los bordes del contenedor */
+}
+
+  .marcaa img:hover {
+    transform: translatey(-5px);
+    box-shadow: 0 4px 8px rgba(100, 100, 100, 0.285);
+    transition: all 0.3s ease-in-out;
   }
 
-  .princ_articles img {
-    width: 10rem;
-    border-radius: 50%;
-    padding: 1rem;
-    background: #329430;
-  }
 
-  .princ_articles h5 {
-    font-size: 1.7rem;
-    font-weight: 600;
-    margin: 0.9rem 0rem;
-  }
+  @media (max-width: 785px) {
+   .marcas {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
 
-  .princ_articles p {
-    margin: 1.5rem 0rem;
-    font-size: 0.9rem;
-  }
-
-  .princ_articles button {
-    padding: 0.5rem 2rem;
-    font-size: 0.9rem;
-    border-radius: 1.2rem;
-    border: 0px #b99292 solid;
-    background: #cfc332;
-    font-weight: 600;
-  }
-
-@media (max-width: 988px) {
-  .princ_articles {
-    flex-wrap: wrap;
-    padding: 0rem 2rem;
-  }
-  }
+   
+   }
 </style>
- 

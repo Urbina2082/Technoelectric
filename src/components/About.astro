@@ -1,127 +1,110 @@
 <div class="Nosotros" id="Nosotros">
-  <div class="barra" data-aos="fade-down">
-    Válvulas <span>+</span> Ingeniería <span>+</span> Actuadores <span>+</span> Instrumentación
-    <span>+</span> Iluminación <span>+</span> Soluciones
-  </div>
-
-  <div class="content_nosotros">
-    <div class="sub_1">
-      <img data-aos="fade-right" src="/img_nosotros.jpg" alt="" />
-    </div>
-    <div class="sub_2" data-aos="fade-right">
-      <span>-- NOSOTROS</span>
-      <h2 data-aos="fade-right">
-        <span>La mejor opción</span> en soluciones <br /> electromecánicas.
-      </h2>
-      <p data-aos="fade-right">
-        Somos una empresa joven, con personal altamente capacitado y con más de
-        10 años de experiencia. Fundada el 31 de enero de 2013, con el firme
-        propósito de atender las necesidades de la industria minera, generación
-        de electricidad, entre otros. Nuestra misión es proveer productos y
-        servicios de la más alta calidad a precios competitivos, cumpliendo con
-        los estándares de calidad que nuestros clientes requieren.
-      </p>
-
-      <div class="counts" data-aos="fade-up">
-        <div class="counts_1">
-          <span>500+</span><br /> Proyectos Completados
-        </div>
-        <div class="counts_2">
-          <span>122+</span><br /> Ingenieros Expertos
-        </div>
-        <div class="counts_3">
-          <span>99%</span><br /> Clientes Satisfechos
-        </div>
+  <div class="sec1"><img src="/nos.webp" alt="" /></div>
+  <div class="sec2">
+    <h2>LA MEJOR OPCION EN SOLUCINES ELECTROMECANICAS</h2>
+    <p>
+      Somos una empresa joven, con personal altIamente capacitado y con mas de
+      10 años de experiencia. Fundada el 31 de enero del 2013 con el firme
+      proposito de atender las nesesidades de la industria minera generacion de
+      electricidad, entre otros. Nuestra Mision es proveer productos y servisioa
+      de las alta calidad a precios pompetitivos, cumpliendo con los estandares
+      de calidad que nuestos clientes requieren.
+    </p> 
+<hr >
+    <div class="count">
+      <div class="count-item">
+        <h3 data-aos="fade-up">70+</h3>
+        <p>Proyectos Compleados</p>
+      </div>
+<hr>
+      <div class="count-item">
+        <h3 data-aos="fade-up">120+</h3>
+        <p>Ingeniero Experto</p>
+      </div>
+      <hr>
+        <div class="count-item">
+        <h3 data-aos="fade-up">500+</h3>
+        <p>Clientes satisfechos</p>
       </div>
     </div>
   </div>
-
-  <style>
-    .barra span {
-      color: #cfc332;
-    }
-
-    .barra {
-      margin-bottom: 4rem;
-      background: #329430;
-      text-align: center;
-      font-size: clamp(1rem, 2vw, 2rem);
-      font-weight: 700;
-      padding: 1rem;
-      color: #fff;
-    }
-
-    .content_nosotros {
-      padding: 0rem 5rem 4rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 4rem;
-    }
-
-    .sub_1 img {
-      width: 20rem;
-      object-fit: cover;
-      object-position: left;
-      height: 30rem;
-      border-radius: 7rem;
-    }
-    .sub_2 p {
-      width: 80%;
-      font-size: clamp(1rem, 1.6vw, 2rem);
-    }
-
-    .sub_2 span {
-      font-weight: 600;
-    }
-
-    .sub_2 h2 {
-      font-size: 2rem;
-      margin: 0.3rem 0rem;
-    }
-    h2 span {
-      color: #329430;
-    }
-
-    /* ------------counts----------- */
-    .counts {
-      display: inline-flex;
-      gap: 4rem;
-      text-align: center;
-      margin: 1rem 0rem;
-    }
-    .counts span {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      color: #329430;
-    }
-
-    @media (max-width: 892px) {
-      .sub_1 img {
-        display: none;
-      }
-      .content_nosotros {
-        gap: 0rem;
-        text-align: center;
-      }
-
-      .sub_2 p {
-        margin: 1rem auto;
-        width: 95%;
-      }
-    }
-
-    @media (max-width: 676px) {
-      .content_nosotros {
-        padding: 1rem 1.6rem;
-      }
-    }
-
-    h2 {
-      margin: 1.5rem 0rem;
-    }
-
-    .counts {
-      gap: 2rem;
-    }
-  </style>
 </div>
+
+<style>
+
+  .Nosotros {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+  }
+
+  .sec1 img {
+    width: 90%;
+    height: auto;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .sec2 {
+    max-width: 600px;
+  }
+
+  .sec2 h2 {
+    font-size: clamp(1.7rem, 4vw, 2.1rem);
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .sec2 p {
+    font-size: 1rem;
+    color: #333333a7;
+    line-height: 1.6;
+  }
+
+  .count {
+    display: flex;
+    gap: 35px;
+    text-align: center; 
+  }
+ 
+
+  .count-item h3 {
+    font-size:clamp(1.7rem, 4vw, 2.2rem);
+    color: #329430;
+    margin-bottom: 0px;
+    font-weight: 800;
+  }
+
+  .count-item p {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+    color: #333333a7;
+    margin-top: 5px;
+  }
+.count hr {
+    width: 2px;
+    background-color: #ccc;
+    border: none;
+    height: 70px;
+    align-self: center;
+  }
+
+  @media (max-width: 768px) {
+    .Nosotros {
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .sec2 {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+    .count {
+      
+      gap: 15px;
+    }
+  }
+</style>
