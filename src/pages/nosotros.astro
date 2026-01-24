@@ -6,16 +6,27 @@ import  Services from '../components/Services.astro';
 import  Engenier from '../components/Engenier.astro';
 import Articles from '../components/Articles.astro'
 import Contact from '../components/Contacto.astro'
-// import Footer from '../components/Footer.astro'
+import Footer from '../components/Footer.astro'
 
 ---
 
-<Layout>
-	<Welcome />
-     <About/>
-	 <Services/>
-	 <Engenier/>
-	 <Articles/>
-	  <Contact/>
-	  <!-- <Footer/> -->
+<Layout LogoDinamic="/reneme.png">
+	
+	
+	
+	
 </Layout>
+
+<style is:global>
+  nav ul a{
+	color: #000000 !important;
+  }
+
+  nav ul a:hover{
+background-color: #000000c2 !important;
+color: #fff !important;
+  }
+
+
+
+</style>

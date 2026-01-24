@@ -10,12 +10,22 @@ import Contact from '../components/Contacto.astro'
 
 ---
 
-<Layout>
-	<Welcome />
+<Layout LogoDinamic="/reneme.png">
+
      <About/>
-	 <Services/>
-	 <Engenier/>
-	 <Articles/>
-	  <Contact/>
+	
 	  <!-- <Footer/> -->
 </Layout>
+
+
+<style is:global>
+  nav ul a{
+	color: #000000 !important;
+  }
+
+  nav ul a:hover{
+background-color: #000000c2 !important;
+color: #fff !important;
+  }
+
+
