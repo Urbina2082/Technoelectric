@@ -1,6 +1,13 @@
+
+
+---
+const { LogoDinamic = "/reneme.png" } = Astro.props
+---
 <footer>
   <div class="titles">
-    <h4>TECHNOELECTRIC</h4>
+    <!-- <h4>TECHNOELECTRIC</h4>              const { LogoDinamic = "/rename.png" , posicion = "absolute"} = Astro.props;
+-->
+     <img src={LogoDinamic} alt="">
     
   </div>
   <div class="info">
@@ -49,7 +56,15 @@
   </div>
 </footer>
 <style>
+
+
+    .titles img {
+      width: 18rem;
+    }
+
   footer {
+
+    
     padding: 8rem 2rem 3rem;
     text-align: center;
   }
@@ -107,6 +122,13 @@
   }
 
   @media (max-width: 768px) {
+
+    .titles img {
+      width: 14rem;
+      margin: auto;
+      
+    }
+    
     footer {
       padding: 4rem 0.5rem 2rem;
     }
