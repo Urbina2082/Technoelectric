@@ -7,18 +7,20 @@ import  Engenier from '../components/Engenier.astro';
 import Articles from '../components/Articles.astro'
 import Contact from '../components/Contacto.astro'
 // import Footer from '../components/Footer.astro'
-
+import Sec_AcercaDe from '../components/Sec_Acerca.astro';
 ---
 
-<Layout LogoDinamic="/reneme.png">
+<Layout LogoDinamic="/reneme.png" posicion="relative">
 
-     <About/>
+      <Sec_AcercaDe/>
 	
 	  <!-- <Footer/> -->
 </Layout>
 
 
 <style is:global>
+
+  
   nav ul a{
 	color: #000000 !important;
   }

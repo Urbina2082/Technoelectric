@@ -1,7 +1,7 @@
 ---
 import Footer from '../components/Footer.astro'
 
-const { LogoDinamic = "/rename.png" } = Astro.props;
+const { LogoDinamic = "/rename.png" , posicion = "absolute"} = Astro.props;
 ---
 
 <!doctype html>
@@ -17,11 +17,16 @@ const { LogoDinamic = "/rename.png" } = Astro.props;
 
   <body>
 
-     <div class="menu">
-    <!-- <h1>TECHNOELECTRIC</h1> -->
+     <div class="menu" style={`position: ${posicion};`}>
     <img src={LogoDinamic} alt="" />
 
-    <nav>
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="primary-nav">
       <ul>
         <li><a href="/">INICIO</a></li>
         <li><a href="/nosotros">SERVICIOS</a></li>
@@ -44,6 +49,44 @@ const { LogoDinamic = "/rename.png" } = Astro.props;
       });
     </script>
 
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menu = document.querySelector('.menu');
+        const btn = document.querySelector('.hamburger');
+        const nav = document.getElementById('primary-nav');
+        const links = nav ? nav.querySelectorAll('a') : [];
+
+        if (!btn || !menu) return;
+
+        const setAria = (open) => {
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        };
+
+        btn.addEventListener('click', () => {
+          const isOpen = menu.classList.toggle('open');
+          setAria(isOpen);
+        });
+
+        // close menu when a link is clicked (mobile)
+        links.forEach((a) => {
+          a.addEventListener('click', () => {
+            if (menu.classList.contains('open')) {
+              menu.classList.remove('open');
+              setAria(false);
+            }
+          });
+        });
+
+        // close on Escape
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && menu.classList.contains('open')) {
+            menu.classList.remove('open');
+            setAria(false);
+          }
+        });
+      });
+    </script>
+
   </body>
 </html>
 
@@ -62,7 +105,6 @@ const { LogoDinamic = "/rename.png" } = Astro.props;
   }
 
   .menu {
-    position: absolute;
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -77,6 +119,28 @@ const { LogoDinamic = "/rename.png" } = Astro.props;
     z-index: 1000;
     background-color: transparent;              --Quedara pendiente */
 
+  }
+
+  /* Hamburger button */
+  .hamburger {
+    display: none;
+    width: 40px;
+    height: 36px;
+    border: 0;
+    background: transparent;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    background: #37c739; /* verde del sitio: visible sobre fondos claros */
+    border-radius: 3px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08) inset;
   }
 
   nav ul {
@@ -113,6 +177,46 @@ const { LogoDinamic = "/rename.png" } = Astro.props;
     font-weight: 800;
   }
 
+  @media screen and (max-width: 768px) {
+    .menu {
+      width: 95%;
+      gap: 20px;
+    }
+
+    .menu img {
+      width: 18rem;
+    }
+
+    nav ul li a {
+      font-size: clamp(0.7rem, 3vw, 0.9rem);
+      padding: 8px 12px;
+    }
+    /* show hamburger on small screens */
+    .hamburger { display: flex; }
+
+    /* hide default horizontal menu */
+    nav ul { display: none; }
+
+    /* when menu is open show vertical dropdown */
+    .menu.open nav ul {
+      display: flex;
+      position: absolute;
+      right: 2.5%;
+      top: 70px;
+      flex-direction: column;
+      gap: 8px;
+      background: rgba(0,0,0,0.7);
+      padding: 12px;
+      border-radius: 8px;
+      z-index: 1200;
+      min-width: 160px;
+    }
+
+    .menu.open .hamburger span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .menu.open .hamburger span:nth-child(2) { opacity: 0; }
+    .menu.open .hamburger span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+    
+  }
 
 </style>
 

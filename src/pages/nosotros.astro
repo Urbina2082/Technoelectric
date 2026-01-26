@@ -8,13 +8,15 @@ import Articles from '../components/Articles.astro'
 import Contact from '../components/Contacto.astro'
 import Footer from '../components/Footer.astro'
 
+import Sec_Nosotros from '../components/Sec_Nosotros.astro';
+
 ---
 
-<Layout LogoDinamic="/reneme.png">
-	
-	
-	
-	
+<Layout LogoDinamic="/reneme.png" posicion="relative">
+
+
+	<Sec_Nosotros />
+
 </Layout>
 
 <style is:global>
@@ -27,6 +29,8 @@ background-color: #000000c2 !important;
 color: #fff !important;
   }
 
-
+.lol {
+  margin-top: 100px;
+}
 
 </style>

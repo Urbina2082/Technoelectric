@@ -8,18 +8,26 @@ import Articles from '../components/Articles.astro'
 import Contact from '../components/Contacto.astro'
 // import Footer from '../components/Footer.astro'
 
+import Sec_Contacto from '../components/Sec_Contacto.astro';
 ---
 
-<Layout LogoDinamic="/reneme.png">
-
-     <About/>
+<Layout LogoDinamic="/reneme.png" posicion="relative">
+<hr>
 	
 	  <Contact/>
+    <Sec_Contacto/>
 	  <!-- <Footer/> -->
 </Layout>
 
 
 <style is:global>
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0px;
+}
+
   nav ul a{
 	color: #000000 !important;
   }
